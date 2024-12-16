@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "rubik",sans-serif;
+}
+
+:root{
+    --bs-Template: hsla(285, 83%, 75%, 0.915);
+    --bs-backgronud: hsl(150, 63%, 91%);
+    --bs-borders:hsla(153, 94%, 26%, 0.915);
+    --bs-colorbox:hsl(45, 72%, 79%);
+}
+
+html, body, .container{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-backgronud);
+}
+
+.factory{
+    gap: 6rem;
+}
+
+.commuting-unit{
+    gap: 2rem;
+}
+
+.baskol, .evacuation{
+    width: 100%;
+    padding: 2rem;
+    border: 5px solid var(--bs-borders);
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 1.5rem;
+    outline: 6px double var(--bs-Template);
+    background-color: var(--bs-colorbox);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.production{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    outline: 6px double var(--bs-Template);
+}
+
+.line-one, .line-two{
+    width: 180px;
+    aspect-ratio: 1;
+    border: 5px solid var(--bs-borders);
+    /* outline: 6px double var(--bs-Template); */
+    border-width: 5px 8px 5px 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.line-two{
+    border-top: none;
+}
+
+.circle{
+    border: 2px solid var(--bs-borders);
+    outline: 3px solid var(--bs-Template);
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bs-Template);
+    position: absolute;
+    z-index: 2;
+}
+
+.circle.material{
+    top: -30px;
+    left: 150px;
+}
+
+.circle.processing{
+    top: -30px;
+    left: 150px;
+}
+
+.circle.product{
+    bottom: -30px;
+    left:150px
+}
+
+.commuting-unit .baskol::after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: var(--bs-borders);
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+
+.commuting-unit .evacuation::after{
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background-color: var(--bs-borders);
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+
+@media (max-width:480px) {
+    
+    .factory .commuting-unit{
+        flex-direction: row;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
